@@ -6,7 +6,7 @@ We want to make sure people are informed with correct zone schools of the houses
 ## How it works
 This service is written using Spring Boot and gets it's data from https://www.schools.nyc.gov
 
-All data are available in public
+All data are available in public and parsed using JSOUP
 
 ## How to run
 To run locally
