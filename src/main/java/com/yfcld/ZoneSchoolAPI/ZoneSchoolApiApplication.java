@@ -1,13 +1,13 @@
-package com.yao.housing.research.houseresearch;
+package com.yfcld.ZoneSchoolAPI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HouseResearchApplication {
+public class ZoneSchoolApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HouseResearchApplication.class, args);
+		SpringApplication.run(ZoneSchoolApiApplication.class, args);
 	}
 
 }
