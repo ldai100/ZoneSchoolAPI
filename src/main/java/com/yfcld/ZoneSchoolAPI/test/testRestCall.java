@@ -2,8 +2,11 @@ package com.yfcld.ZoneSchoolAPI.test;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yfcld.ZoneSchoolAPI.object.School;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -44,14 +47,32 @@ public class testRestCall {
         //System.out.println(doc.body());
 
 
-        for(int i =0; i < 10; i++){
+/*        for(int i =0; i < 10; i++){
             System.out.println("############################################");
             //child 3
             System.out.println(doc.body().child(i));
             System.out.println("############################################");
+        }*/
+
+        /*System.out.println(doc.body().getElementsByClass("featured-item"));
+        */
+        Elements elements = doc.body().getElementsByClass("featured-item");
+
+        System.out.println(elements.size());
+
+        List<School> zonedSchools = new ArrayList<>();
+
+        for(Element e : elements){
+            School tempSchool = new School();
+            tempSchool.setName(e.attr("data-name"));
+            //System.out.println(e.getElementsByAttributeValueContaining("strong","Address"));
+            String tempAddress = e.select("div > div > div > p").toString();
+            tempAddress= tempAddress.replaceAll("<[a-zA-Z?/]>","");
+            System.out.println(tempAddress);
+            zonedSchools.add(tempSchool);
         }
 
-        System.out.println(doc.body().child(3).child(1));
+
         //ZillowExtract zillowExtract = new ObjectMapper().readValue(str,ZillowExtract.class);
         //System.out.println(zillowExtract);
     }
