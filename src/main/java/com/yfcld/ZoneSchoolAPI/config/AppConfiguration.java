@@ -1,4 +1,4 @@
-package com.yao.housing.research.houseresearch.config;
+package com.yfcld.ZoneSchoolAPI.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

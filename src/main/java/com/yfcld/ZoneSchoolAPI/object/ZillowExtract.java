@@ -1,4 +1,4 @@
-package com.yao.housing.research.houseresearch.object;
+package com.yfcld.ZoneSchoolAPI.object;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
