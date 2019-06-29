@@ -1,8 +1,7 @@
-package com.yao.housing.research.houseresearch.test;
+package com.yfcld.ZoneSchoolAPI.test;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yao.housing.research.houseresearch.object.ZillowExtract;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.springframework.core.ParameterizedTypeReference;
