@@ -12,3 +12,8 @@ All data are available in public and parsed using JSOUP
 To run locally
 1) Do a maven build and simply run ZoneSchoolApiApplication.java
 2) Build the project and run ZoneSchoolAPI***.jar
+
+## Challenges
+Our biggest challenge right now is lack of data.  We only know where to get zone school info for NYC schools.
+Anywhere else such as Long Island area and other states, we couldn't find any reliable source of zone schools.
+Feel free to provide tips, info, or anything else to us.
