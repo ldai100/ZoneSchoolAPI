@@ -67,8 +67,10 @@ public class testRestCall {
             tempSchool.setName(e.attr("data-name"));
             //System.out.println(e.getElementsByAttributeValueContaining("strong","Address"));
             String tempAddress = e.select("div > div > div > p").toString();
-            tempAddress= tempAddress.replaceAll("<[a-zA-Z?/]>","");
+            tempAddress= tempAddress.replaceAll("</*[a-zA-Z]+>","");
+            tempAddress = tempAddress.substring(0,tempAddress.lastIndexOf(' '));
             System.out.println(tempAddress);
+            tempSchool.setAddress(tempAddress);
             zonedSchools.add(tempSchool);
         }
 

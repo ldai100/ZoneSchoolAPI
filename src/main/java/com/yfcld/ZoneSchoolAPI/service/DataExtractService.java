@@ -23,10 +23,10 @@ public class DataExtractService {
         for(Element e : elements){
             School tempSchool = new School();
             tempSchool.setName(e.attr("data-name"));
-            StringBuilder tempAddress = new StringBuilder();
-            tempAddress.append(e);
-
-
+            String tempAddress = e.select("div > div > div > p").toString();
+            tempAddress= tempAddress.replaceAll("</*[a-zA-Z]+>","");
+            tempAddress = tempAddress.substring(0,tempAddress.lastIndexOf(' '));
+            tempSchool.setAddress(tempAddress);
             zonedSchools.add(tempSchool);
         }
         return zonedSchools;

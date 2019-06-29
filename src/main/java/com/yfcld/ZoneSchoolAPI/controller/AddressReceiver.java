@@ -21,7 +21,7 @@ public class AddressReceiver {
 
     @GetMapping("/zoneSchool")
     public List<School> zoneSchools(String address) {
-        String res = restTemplate.getForObject("https://www.schools.nyc.gov/find-a-school?address=1654+65th+street%2C+brooklyn&sort=nearest&ShowZonedSchools=1&ShowCurrentYear=1&mpp=36&school_borough=&pg=1&grade_levels=", String.class);
+        String res = restTemplate.getForObject("https://www.schools.nyc.gov/find-a-school?address="+ address +"&sort=nearest&ShowZonedSchools=1&ShowCurrentYear=1&mpp=36&school_borough=&pg=1&grade_levels=", String.class);
         return dataExtractService.getDataExtract(res);
     }
 }
